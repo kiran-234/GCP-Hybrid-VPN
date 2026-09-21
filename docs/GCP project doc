@@ -1,1 +1,55 @@
+# GCP Hybrid VPN Network Lab
 
+## 1. Project Overview
+
+This project is a self-initiated Google Cloud networking lab that simulates hybrid connectivity between a GCP environment and an on-premises environment.
+
+The project demonstrates:
+
+- GCP VPC networking
+- HA VPN connectivity
+- Cloud Router
+- BGP dynamic routing
+- Network connectivity testing
+- HTTP(S) Load Balancing
+- Cloud Monitoring
+- Cloud Logging
+- Network troubleshooting
+
+---
+
+## 2. Architecture
+
+The environment consists of two VPC networks:
+
+- `gcp-vpc`
+- `onprem-vpc`
+
+The two environments are connected using HA VPN gateways and Cloud Routers with BGP.
+
+```text
+                    Internet
+                       |
+                HTTP(S) Load Balancer
+                       |
+                   GCP VPC
+                       |
+                  GCP VM(s)
+                       |
+                 Cloud Router
+                       |
+                      BGP
+                       |
+                  HA VPN GW
+                       ||
+                   VPN Tunnel
+                       ||
+                  HA VPN GW
+                       |
+                 Cloud Router
+                       |
+                      BGP
+                       |
+                 On-Prem VPC
+                       |
+                  On-Prem VM

@@ -1,5 +1,4 @@
-# GCP Hybrid VPN Network Lab
-
+# GCP Hybrid VPN Network
 A self-initiated Google Cloud networking project that simulates secure hybrid connectivity between an on-premises environment and Google Cloud.
 
 The project demonstrates cloud network design, HA VPN connectivity, dynamic routing with BGP, load balancing, monitoring, logging, connectivity validation, and network troubleshooting.
